@@ -43,6 +43,7 @@ TestServer.start(config)
           return server.mailbox.waitForEmail(email)
         }
       )
+      .catch(t.threw)
     }
   )
 

@@ -61,6 +61,7 @@ TestServer.start(config)
                   return client.destroyDevice(devices[0].id)
                 }
               )
+              .catch(t.threw)
           }
         )
     }
@@ -112,6 +113,7 @@ TestServer.start(config)
                   return client.destroyDevice(devices[0].id)
                 }
               )
+              .catch(t.threw)
           }
         )
     }
@@ -265,6 +267,7 @@ TestServer.start(config)
                   ])
                 }
               )
+              .catch(t.threw)
           }
         )
     }
@@ -314,6 +317,7 @@ TestServer.start(config)
                 t.equal(devices[0].pushAuthKey, '', 'devices returned newly empty pushAuthKey')
               }
             )
+            .catch(t.threw)
         }
       )
     }
@@ -351,6 +355,7 @@ TestServer.start(config)
                 return client.destroyDevice(devices[0].id)
               }
             )
+            .catch(t.threw)
         }
       )
     }
@@ -387,6 +392,7 @@ TestServer.start(config)
                 return client.destroyDevice(devices[0].id)
               }
             )
+            .catch(t.threw)
         }
       )
     }
@@ -425,6 +431,7 @@ TestServer.start(config)
                 return client.destroyDevice(devices[0].id)
               }
             )
+            .catch(t.threw)
         }
       )
     }

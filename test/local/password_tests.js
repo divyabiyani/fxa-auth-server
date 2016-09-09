@@ -27,6 +27,7 @@ test(
         t.ok(matched, 'identical passwords should match')
       }
     )
+    .catch(t.threw)
   }
 )
 
@@ -50,6 +51,7 @@ test(
         t.ok(matched, 'identical passwords should match')
       }
     )
+    .catch(t.threw)
   }
 )
 
@@ -71,6 +73,7 @@ test(
         t.ok(!matched, 'passwords should not match')
       }
     )
+    .catch(t.threw)
   }
 )
 

@@ -25,6 +25,7 @@ TestServer.start(config)
             t.ok(response.exists, 'account exists')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -42,6 +43,7 @@ TestServer.start(config)
             t.equal(response.locale, 'en-US', 'locale is stored')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -59,6 +61,7 @@ TestServer.start(config)
             t.ok(!response.locale, 'locale is not present')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -80,6 +83,7 @@ TestServer.start(config)
             t.equal(e.errno, 108, 'correct errno')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -93,6 +97,7 @@ TestServer.start(config)
             t.ok(!response.exists, 'account does not exist')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -111,6 +116,7 @@ TestServer.start(config)
             t.ok(response.exists, 'account exists')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -130,6 +136,7 @@ TestServer.start(config)
             t.ok(!response.exists, 'account does not exist')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -138,6 +145,7 @@ TestServer.start(config)
     function (t) {
       var email = server.uniqueEmail()
       return Client.create(config.publicUrl, email, 'password')
+        .catch(t.threw)
         .then(
           function (c) {
             var invalidEmail = 'notAnEmail'
@@ -172,6 +180,7 @@ TestServer.start(config)
             t.ok(response.exists, 'account exists')
           }
         )
+        .catch(t.threw)
     }
   )
 

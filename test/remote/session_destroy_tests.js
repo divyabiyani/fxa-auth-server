@@ -31,6 +31,7 @@ TestServer.start(config)
             return client.destroySession()
           }
         )
+        .catch(t.threw)
         .then(
           function () {
             t.equal(client.sessionToken, null, 'session token deleted')
@@ -72,6 +73,7 @@ TestServer.start(config)
             t.deepEqual(x, { uid: uid }, 'good status')
           }
         )
+        .catch(t.threw)
     }
   )
 

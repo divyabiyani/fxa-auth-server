@@ -68,6 +68,7 @@ TestServer.start(config)
               t.equal(status.sessionVerified, true, 'account session is verified')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -135,6 +136,7 @@ TestServer.start(config)
               t.equal(status.sessionVerified, true, 'account session is verified')
             }
           )
+          .catch(t.threw)
       }
     )
 

@@ -29,6 +29,7 @@ TestServer.start(config)
             return client.destroyAccount()
           }
         )
+        .catch(t.threw)
         .then(
           function () {
             return client.keys()

@@ -33,6 +33,7 @@ TestServer.start(config)
             t.equal(response.locale, 'en-US', 'locale is returned')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -56,6 +57,7 @@ TestServer.start(config)
             t.equal(response.locale, 'en-US', 'locale is returned')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -132,6 +134,7 @@ TestServer.start(config)
             t.deepEqual(response, {}, 'no info should be returned')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -173,6 +176,7 @@ TestServer.start(config)
             t.equal(response.locale, 'en-US', 'locale is returned')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -230,6 +234,7 @@ TestServer.start(config)
             t.ok(!response.locale, 'locale should not be returned')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -248,6 +253,7 @@ TestServer.start(config)
             t.equal(response.email, email, 'email address is returned')
           }
         )
+        .catch(t.threw)
     }
   )
 

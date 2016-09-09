@@ -31,6 +31,7 @@ test(
         t.equal(typeof token.isFresh, 'function', 'isFresh method is defined')
         t.equal(typeof token.setUserAgentInfo, 'function', 'setUserAgentInfo method is defined')
       })
+      .catch(t.threw)
   }
 )
 
@@ -65,6 +66,7 @@ test(
           t.equal(token.tokenVerificationId, token2.tokenVerificationId)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -82,6 +84,7 @@ test(
         t.equal(token.accountCreatedAt, null)
       }
     )
+    .catch(t.threw)
   }
 )
 
@@ -99,6 +102,7 @@ test(
           t.equal(token.authKey.toString('hex'), '9d8f22998ee7f5798b887042466b72d53e56ab0c094388bf65831f702d2febc0')
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -149,6 +153,7 @@ test(
         t.equal(token.uaDeviceType, 'wibble', 'uaDeviceType was updated')
         t.equal(token.lastAccessTime, 'mnngh', 'lastAccessTime was updated')
       })
+      .catch(t.threw)
   }
 )
 
@@ -228,6 +233,7 @@ test(
         lastAccessTime: 3599999
       }), true, 'returns true when lastAccessTime is 3,599,999 milliseconds newer')
     })
+    .catch(t.threw)
   }
 )
 
@@ -264,6 +270,7 @@ test(
 
       t.equal(SessionToken.prototype.setUserAgentInfo.callCount, 0, 'setUserAgentInfo was not called')
     })
+    .catch(t.threw)
     .finally(function () {
       SessionToken.prototype.isFresh.restore()
       SessionToken.prototype.setUserAgentInfo.restore()
@@ -297,6 +304,7 @@ test(
         t.equal(setUserAgentInfoArgs.length, 1, 'setUserAgentInfo was passed one argument')
         t.deepEqual(setUserAgentInfoArgs[0], isFreshArgs[0], 'setUserAgentInfo was passed correct argument')
       })
+      .catch(t.threw)
       .finally(function () {
         SessionToken.prototype.isFresh.restore()
         SessionToken.prototype.setUserAgentInfo.restore()

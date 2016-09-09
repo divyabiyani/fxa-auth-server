@@ -127,5 +127,6 @@ createDBServer().then(
           }
         }
       )
+      .catch(t.threw)
     })
   })

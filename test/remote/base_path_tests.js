@@ -43,6 +43,7 @@ TestServer.start(config)
       var password = 'ok'
       // if this doesn't crash, we're all good
       return Client.create(config.publicUrl, email, password, server.mailbox)
+        .catch(t.threw)
     }
   )
 

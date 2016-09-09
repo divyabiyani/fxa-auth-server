@@ -26,6 +26,7 @@ TestServer.start(config)
             t.ok(client.authAt, 'authAt was set')
           }
         )
+        .catch(t.threw)
         .then(
           function () {
             return client.keys()
@@ -99,6 +100,7 @@ TestServer.start(config)
             t.equal(status.verified, true)
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -127,6 +129,7 @@ TestServer.start(config)
             t.ok(emailData.headers['x-link'].indexOf('resume=foo') > -1)
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -176,6 +179,7 @@ TestServer.start(config)
             return client.destroyAccount()
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -218,6 +222,7 @@ TestServer.start(config)
             t.ok(client.sessionToken, 'client can login')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -239,6 +244,7 @@ TestServer.start(config)
               )
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -260,6 +266,7 @@ TestServer.start(config)
               )
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -270,6 +277,7 @@ TestServer.start(config)
       var email2 = email.toUpperCase()
       var password = 'abcdef'
       return Client.createAndVerify(config.publicUrl, email, password, server.mailbox)
+        .catch(t.threw)
         .then(
           function (c) {
             return Client.create(config.publicUrl, email2, password)
@@ -307,6 +315,7 @@ TestServer.start(config)
             t.ok(client.uid, 'account created')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -383,6 +392,7 @@ TestServer.start(config)
         .then(function (emailData) {
           t.equal(emailData.headers['x-service-id'], 'bar', 'service query parameter was propagated')
         })
+        .catch(t.threw)
     }
   )
 
@@ -398,6 +408,7 @@ TestServer.start(config)
         .then(function (emailData) {
           t.ok(emailData, 'received email')
         })
+        .catch(t.threw)
     }
   )
 
@@ -413,6 +424,7 @@ TestServer.start(config)
       }).then(function (client) {
         t.ok(client, 'created account')
       })
+      .catch(t.threw)
     }
   )
 
@@ -471,6 +483,7 @@ TestServer.start(config)
       }).then(function (client) {
         t.ok(client, 'created account')
       })
+      .catch(t.threw)
     }
   )
 
@@ -483,6 +496,7 @@ TestServer.start(config)
       }).then(function (client) {
         t.ok(client, 'created account')
       })
+      .catch(t.threw)
     }
   )
 
@@ -569,6 +583,7 @@ TestServer.start(config)
             t.ok(code, 'the next email was reset-password, not post-verify')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -623,6 +638,7 @@ TestServer.start(config)
             t.ok(code, 'the next email was reset-password, not post-verify')
           }
         )
+        .catch(t.threw)
     }
   )
 

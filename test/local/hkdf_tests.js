@@ -24,6 +24,7 @@ test(
           return hkdfResult
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -47,5 +48,6 @@ test(
           return hkdfResult
         }
       )
+      .catch(t.threw)
   }
 )

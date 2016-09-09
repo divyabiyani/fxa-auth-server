@@ -47,6 +47,7 @@ test(
           t.deepEqual(token.email, token2.email)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -63,6 +64,7 @@ test(
           t.equal(token.ttl(timestamp + 2000), 898)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -81,5 +83,6 @@ test(
           t.equal(x.failAttempt(), true)
         }
       )
+      .catch(t.threw)
   }
 )

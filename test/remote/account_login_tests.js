@@ -18,6 +18,7 @@ TestServer.start(config)
       var email = server.uniqueEmail()
       var password = 'abcdef'
       return Client.createAndVerify(config.publicUrl, email, password, server.mailbox)
+        .catch(t.threw)
         .then(
           function () {
             return Client.login(config.publicUrl, email, password + 'x')
@@ -41,6 +42,7 @@ TestServer.start(config)
       var loginEmail = signupEmail.toUpperCase()
       var password = 'abcdef'
       return Client.createAndVerify(config.publicUrl, signupEmail, password, server.mailbox)
+        .catch(t.threw)
         .then(
           function () {
             return Client.login(config.publicUrl, loginEmail, password)
@@ -91,6 +93,7 @@ TestServer.start(config)
             t.equal(c.keyFetchToken, null, 'should not have keyFetchToken')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -110,6 +113,7 @@ TestServer.start(config)
             t.ok(client, 'logged in to account')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -129,6 +133,7 @@ TestServer.start(config)
         .then(function (client) {
           t.ok(client, 'logged in to account')
         })
+        .catch(t.threw)
     }
   )
 

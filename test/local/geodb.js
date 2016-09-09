@@ -31,6 +31,7 @@ test(
       t.equal(geoData.timeZone, 'America/Los_Angeles')
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -56,5 +57,6 @@ test(
       t.deepEqual(geoData, {})
       t.end()
     })
+    .catch(t.threw)
   }
 )

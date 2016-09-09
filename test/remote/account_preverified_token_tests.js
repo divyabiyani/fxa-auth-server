@@ -52,6 +52,7 @@ TestServer.start(config)
             t.ok(Buffer.isBuffer(keys.wrapKb), 'wrapKb exists')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -113,6 +114,7 @@ TestServer.start(config)
             t.ok(Buffer.isBuffer(keys.wrapKb), 'wrapKb exists')
           }
         )
+        .catch(t.threw)
     }
   )
 

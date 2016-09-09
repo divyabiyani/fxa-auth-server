@@ -102,6 +102,7 @@ test('require', function (t) {
             t.equal(args[1], device.name, 'second arguent was device name')
             t.equal(args[2], deviceId.toString('hex'), 'third argument was device id')
           })
+          .catch(t.threw)
           .then(function () {
             db.createDevice.reset()
             push.notifyDeviceConnected.reset()
@@ -132,6 +133,7 @@ test('require', function (t) {
 
             t.equal(push.notifyDeviceConnected.callCount, 1, 'push.notifyDeviceConnected was called once')
           })
+          .catch(t.threw)
           .then(function () {
             db.createDevice.reset()
             push.notifyDeviceConnected.reset()
@@ -181,6 +183,7 @@ test('require', function (t) {
 
             t.equal(push.notifyDeviceConnected.callCount, 0, 'push.notifyDeviceConnected was not called')
           })
+          .catch(t.threw)
           .then(function () {
             db.createDevice.reset()
             log.activityEvent.reset()

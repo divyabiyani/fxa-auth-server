@@ -94,6 +94,7 @@ test(
         t.equal(account.verifierVersion, ACCOUNT.verifierVersion, 'verifierVersion')
         t.ok(account.createdAt, 'createdAt')
       })
+      .catch(t.threw)
     })
   }
 )
@@ -197,6 +198,7 @@ test(
       .then(function(sessionToken) {
         return db.deleteSessionToken(sessionToken)
       })
+      .catch(t.threw)
       .then(function() {
         return db.sessionToken(tokenId)
       })
@@ -341,6 +343,7 @@ test(
         .then(function (devices) {
           t.equal(devices.length, 0, 'devices array is empty')
         })
+        .catch(t.threw)
     })
   }
 )
@@ -374,6 +377,7 @@ test(
       .then(function(keyFetchToken) {
         return db.deleteKeyFetchToken(keyFetchToken)
       })
+      .catch(t.threw)
       .then(function() {
         return db.keyFetchToken(tokenId)
       })
@@ -412,6 +416,7 @@ test(
       .then(function(accountResetToken) {
         return db.deleteAccountResetToken(accountResetToken)
       })
+      .catch(t.threw)
       .then(function() {
         return db.accountResetToken(tokenId)
       })
@@ -464,6 +469,7 @@ test(
       .then(function(passwordForgotToken) {
         return db.deletePasswordForgotToken(passwordForgotToken)
       })
+      .catch(t.threw)
       .then(function() {
         return db.passwordForgotToken(token1.tokenId)
       })
@@ -492,6 +498,7 @@ test(
       .then(function(account) {
         t.ok(account.emailVerified, 'account should now be emailVerified')
       })
+      .catch(t.threw)
     })
   }
 )
@@ -519,6 +526,7 @@ test(
         t.deepEqual(accountResetToken.uid, ACCOUNT.uid)
         return db.deleteAccountResetToken(token1)
       })
+      .catch(t.threw)
     })
   }
 )
@@ -545,6 +553,7 @@ test(
       .then(function(exists) {
         t.equal(exists, true, 'account should still exist')
       })
+      .catch(t.threw)
     })
   }
 )
@@ -565,6 +574,7 @@ test(
       .then(function(exists) {
         t.equal(exists, false, 'account should no longer exist')
       })
+      .catch(t.threw)
     })
   }
 )

@@ -217,7 +217,6 @@ test(
         t.notOk(err.output.payload.retryAfter, 'retryAfter field is not present')
         t.notOk(err.output.headers['retry-after'], 'retryAfter header is not present')
       })
-
   }
 )
 

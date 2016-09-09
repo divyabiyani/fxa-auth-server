@@ -88,6 +88,7 @@ test(
           t.end()
         }
       })
+      .catch(t.threw)
   }
 )
 

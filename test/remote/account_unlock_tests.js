@@ -28,6 +28,7 @@ TestServer.start(config)
             t.equal(e.code, 410, 'correct error status code')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -48,6 +49,7 @@ TestServer.start(config)
             t.equal(e.code, 410, 'correct error status code')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -68,6 +70,7 @@ TestServer.start(config)
             t.equal(e.code, 410, 'correct error status code')
           }
         )
+        .catch(t.threw)
     }
   )
 

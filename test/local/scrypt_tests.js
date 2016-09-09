@@ -24,6 +24,7 @@ test(
           t.equal(K2, '5b82f146a64126923e4167a0350bb181feba61f63cb1714012b19cb0be0119c5')
         }
       )
+      .catch(t.threw)
   }
 )
 

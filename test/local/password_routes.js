@@ -80,6 +80,7 @@ test(
       t.deepEqual(args[0].uid, uid, 'db.createPasswordForgotToken was passed the correct uid')
       t.equal(args[0].createdAt, undefined, 'db.createPasswordForgotToken was not passed a createdAt timestamp')
     })
+    .catch(t.threw)
   }
 )
 
@@ -129,5 +130,6 @@ test(
       t.equal(mockMailer.sendPasswordChangedNotification.callCount, 1)
       t.equal(mockMailer.sendPasswordChangedNotification.firstCall.args[0], TEST_EMAIL)
     })
+    .catch(t.threw)
   }
 )

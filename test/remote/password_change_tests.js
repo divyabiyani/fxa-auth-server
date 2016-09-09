@@ -149,6 +149,7 @@ TestServer.start(config)
             t.deepEqual(keys.kA, kA, 'kA is preserved')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -243,6 +244,7 @@ TestServer.start(config)
             t.deepEqual(keys.kA, kA, 'kA is preserved')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -271,6 +273,7 @@ TestServer.start(config)
             t.equal(status.verified, true, 'account is verified')
           }
         )
+        .catch(t.threw)
         .then(
           function () {
             return client.changePassword(newPassword, undefined, client.sessionToken)
@@ -355,6 +358,7 @@ TestServer.start(config)
             t.deepEqual(keys.kA, kA, 'kA is preserved')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -383,6 +387,7 @@ TestServer.start(config)
             t.equal(err.errno, 103, 'invalid password')
           }
         )
+        .catch(t.threw)
     }
   )
 

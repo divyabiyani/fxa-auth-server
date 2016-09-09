@@ -21,6 +21,7 @@ TestServer.start(config)
       var email = Math.random() + '@example.com'
       var password = 'ok'
       return Client.create(config.publicUrl, email, password, { preVerified: true })
+        .catch(t.threw)
         .then(
           function (c) {
             return c.changePassword('hello')

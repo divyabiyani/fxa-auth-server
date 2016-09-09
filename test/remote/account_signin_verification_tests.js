@@ -57,6 +57,7 @@ TestServer.start(config)
               t.equal(response.verified, true, 'verified set true')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -95,6 +96,7 @@ TestServer.start(config)
               t.equal(response.verified, false, 'verified set to false')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -174,6 +176,7 @@ TestServer.start(config)
               t.equal(status.verified, true, 'account is verified confirming email')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -245,6 +248,7 @@ TestServer.start(config)
               t.pass('The code from the account verification email worked again')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -287,6 +291,7 @@ TestServer.start(config)
               t.equal(emailData.subject, 'Confirm new sign-in to Firefox')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -381,6 +386,7 @@ TestServer.start(config)
               t.equal(status.sessionVerified, false, 'account session is not verified')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -443,6 +449,7 @@ TestServer.start(config)
               t.equal(payload['fxa-tokenVerified'], false, 'tokenVerified is not verified')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -506,6 +513,7 @@ TestServer.start(config)
               t.equal(payload['fxa-tokenVerified'], false, 'tokenVerified is not verified')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -548,6 +556,7 @@ TestServer.start(config)
               t.equal(payload['fxa-tokenVerified'], true, 'tokenVerified is verified')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -629,6 +638,7 @@ TestServer.start(config)
               t.ok(keys.wrapKb, 'has wrapKb keys')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -716,6 +726,7 @@ TestServer.start(config)
               t.ok(keys.wrapKb, 'has wrapKb keys')
             }
           )
+          .catch(t.threw)
       }
     )
 

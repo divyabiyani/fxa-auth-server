@@ -37,6 +37,7 @@ test(
           t.deepEqual(token.uid, token2.uid)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -55,5 +56,6 @@ test(
           t.equal(token.bundleKey.toString('hex'), 'aa5906d2318c6e54ecebfa52f10df4c036165c230cc78ee859f546c66ea3c126')
         }
       )
+      .catch(t.threw)
   }
 )

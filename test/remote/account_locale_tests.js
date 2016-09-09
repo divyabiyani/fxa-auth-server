@@ -55,6 +55,7 @@ TestServer.start(config)
             t.equal(response.locale, 'en-US', 'account has a locale')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -79,6 +80,7 @@ TestServer.start(config)
           t.ok(!response.locale, 'account has no locale')
         }
       )
+      .catch(t.threw)
     }
   )
 
@@ -103,6 +105,7 @@ TestServer.start(config)
           t.equal(response.locale, 'en-US,en;q=0.8', 'account has no locale')
         }
       )
+      .catch(t.threw)
     }
   )
 

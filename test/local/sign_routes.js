@@ -43,7 +43,7 @@ test(
     })
 
     t.test('without service', function (t) {
-      return runTest({
+      return runTest(t, {
         devices: mockDevices,
         log: mockLog
       }, mockRequest, function () {
@@ -74,7 +74,7 @@ test(
     t.test('with service=sync', function (t) {
       mockRequest.query.service = 'sync'
 
-      return runTest({
+      return runTest(t, {
         devices: mockDevices,
         log: mockLog
       }, mockRequest, function () {
@@ -90,7 +90,7 @@ test(
     t.test('with service=foo', function (t) {
       mockRequest.query.service = 'foo'
 
-      return runTest({
+      return runTest(t, {
         devices: mockDevices,
         log: mockLog
       }, mockRequest, function () {
@@ -108,7 +108,7 @@ test(
       mockRequest.query.service = 'sync'
       mockRequest.auth.credentials.deviceId = crypto.randomBytes(16)
 
-      return runTest({
+      return runTest(t, {
         devices: mockDevices,
         log: mockLog
       }, mockRequest, function () {
@@ -124,12 +124,13 @@ test(
   }
 )
 
-function runTest (options, request, assertions) {
+function runTest (t, options, request, assertions) {
   return new P(function (resolve) {
     getRoute(makeRoutes(options), '/certificate/sign')
       .handler(request, resolve)
   })
   .then(assertions)
+  .catch(t.threw)
 }
 
 function makeRoutes (options) {

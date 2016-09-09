@@ -32,6 +32,7 @@ test(
     })).then(function () {
       t.equal(mockLog.messages.length, 0)
     })
+    .catch(t.threw)
   }
 )
 
@@ -73,6 +74,7 @@ test(
       t.equal(mockLog.messages[5].args[0].email, 'foobar@example.com')
       t.equal(mockMsg.del.callCount, 1)
     })
+    .catch(t.threw)
   }
 )
 
@@ -107,6 +109,7 @@ test(
       t.equal(mockDB.emailRecord.args[1][0], 'foobar@example.com')
       t.equal(mockLog.messages.length, 6)
     })
+    .catch(t.threw)
   }
 )
 
@@ -158,6 +161,7 @@ test(
       t.equal(mockLog.messages[5].level, 'increment')
       t.equal(mockLog.messages[5].args[0], 'account.email_bounced.already_verified')
     })
+    .catch(t.threw)
   }
 )
 
@@ -189,6 +193,7 @@ test(
       t.equal(mockLog.messages[2].args[0].email, 'test@example.com')
       t.equal(mockMsg.del.callCount, 1)
     })
+    .catch(t.threw)
   }
 )
 
@@ -230,6 +235,7 @@ test(
       t.equal(mockLog.messages[2].args[0].err.errno, error.ERRNO.ACCOUNT_UNKNOWN)
       t.equal(mockMsg.del.callCount, 1)
     })
+    .catch(t.threw)
   }
 )
 
@@ -269,5 +275,6 @@ test(
       t.equal(mockDB.deleteAccount.callCount, 1)
       t.equal(mockDB.deleteAccount.args[0][0].email, 'test.@example.com')
     })
+    .catch(t.threw)
   }
 )

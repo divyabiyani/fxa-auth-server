@@ -44,6 +44,7 @@ test(
           t.equal(token.emailVerified, token2.emailVerified)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -65,6 +66,7 @@ test(
           t.equal(x.authKey, token.authKey, 'should have same authKey')
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -93,6 +95,7 @@ test(
           t.deepEqual(ub.wrapKb, wrapKb)
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -117,6 +120,7 @@ test(
           return token1.bundleKeys(kA, wrapKb)
         }
       )
+      .catch(t.threw)
       .then(
         function (b) {
           return token2.unbundleKeys(b)
@@ -165,5 +169,6 @@ test(
                   '17a077eef4b20d976f7a97363faf3f064c003ada7d01aa70')
         }
       )
+      .catch(t.threw)
   }
 )

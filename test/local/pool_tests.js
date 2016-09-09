@@ -14,6 +14,7 @@ test(
 
     var pool = new Pool('http://example.com/ignore/me')
     pool.request()
+      .catch(t.threw)
 
     t.equal(poolee.request.callCount, 1, 'poolee.request was called once')
 
@@ -44,6 +45,7 @@ test(
 
     var pool = new Pool('http://example.com/')
     pool.request('POST', '/foo', { bar: 'baz' })
+      .catch(t.threw)
 
     t.equal(poolee.request.callCount, 1, 'poolee.request was called once')
 

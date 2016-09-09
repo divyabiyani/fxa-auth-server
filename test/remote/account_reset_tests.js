@@ -91,6 +91,7 @@ TestServer.start(config)
               t.equal(client.kB.length, 32, 'kB exists, has the right length')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -172,6 +173,7 @@ TestServer.start(config)
               t.equal(client.kB.length, 32, 'kB exists, has the right length')
             }
           )
+          .catch(t.threw)
       }
     )
 
@@ -214,6 +216,7 @@ TestServer.start(config)
               t.equal(response.verified, true,  'verified is true')
             }
           )
+          .catch(t.threw)
       }
     )
 

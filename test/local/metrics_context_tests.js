@@ -65,6 +65,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -94,6 +95,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -121,6 +123,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -147,6 +150,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -177,6 +181,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -199,6 +204,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -214,6 +220,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -274,6 +281,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -295,6 +303,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -334,6 +343,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -400,6 +410,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -446,6 +457,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -480,6 +492,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -521,6 +534,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -550,6 +564,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 
@@ -590,6 +605,7 @@ test(
 
       t.end()
     })
+    .catch(t.threw)
   }
 )
 

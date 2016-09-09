@@ -59,6 +59,7 @@ test(
           t.equal(status.verified, true, 'account is verified')
         }
       )
+      .catch(t.threw)
       .done(function() {
         server.stop()
         t.end()
@@ -122,6 +123,7 @@ test(
           t.equal(status.sessionVerified, false, 'session is not verified')
         }
       )
+      .catch(t.threw)
       .done(function() {
         server.stop()
         t.end()

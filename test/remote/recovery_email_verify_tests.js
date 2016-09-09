@@ -57,6 +57,7 @@ TestServer.start(config)
             t.equal(status.verified, false, 'account not verified')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -91,6 +92,7 @@ TestServer.start(config)
             t.equal(query.service, options.service, 'service is in link')
           }
         )
+        .catch(t.threw)
     }
   )
 

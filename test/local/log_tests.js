@@ -116,6 +116,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -162,6 +163,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -205,6 +207,7 @@ test(
       logger.error.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -240,6 +243,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -273,6 +277,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -304,6 +309,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -339,6 +345,7 @@ test(
       logger.info.reset()
       statsd.write.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -367,6 +374,7 @@ test(
 
       logger.error.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -395,6 +403,7 @@ test(
 
       logger.error.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -414,6 +423,7 @@ test(
 
       logger.error.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -434,6 +444,7 @@ test(
 
       logger.error.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -469,6 +480,7 @@ test(
       metricsContext.gather.reset()
       logger.info.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -500,6 +512,7 @@ test(
       metricsContext.gather.reset()
       logger.error.reset()
     })
+    .catch(t.threw)
   }
 )
 
@@ -520,6 +533,7 @@ test(
 
       metricsContext.gather.reset()
     })
+    .catch(t.threw)
   }
 )
 

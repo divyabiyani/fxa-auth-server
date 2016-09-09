@@ -148,6 +148,7 @@ test(
           t.equal(device.pushAuthKey, '', 'device.pushAuthKey is correct')
           t.end()
         })
+        .catch(t.threw)
     })
   }
 )

@@ -56,6 +56,7 @@ TestServer.start(config)
             t.equal(payload.principal.email.split('@')[0], client.uid, 'cert has correct uid')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -98,6 +99,7 @@ TestServer.start(config)
             t.equal(typeof(cert), 'string', 'cert exists')
           }
         )
+        .catch(t.threw)
     }
   )
 

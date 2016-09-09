@@ -85,6 +85,7 @@ TestServer.start(config)
             return server.mailbox.waitForEmail(email)
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -228,6 +229,7 @@ TestServer.start(config)
             t.equal(query.email, email, 'email is in link')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -251,6 +253,7 @@ TestServer.start(config)
                   t.ok(x.ttl > 0 && x.ttl <= (60 * 60), 'ttl is ok')
                 }
               )
+              .catch(t.threw)
           }
         )
     }
@@ -318,6 +321,7 @@ TestServer.start(config)
             t.equal(status.verified, true, 'account unverified')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -348,6 +352,7 @@ TestServer.start(config)
           var query = url.parse(link, true).query
           t.equal(query.service, options.serviceQuery, 'service is in link')
         })
+        .catch(t.threw)
     }
   )
 
@@ -410,6 +415,7 @@ TestServer.start(config)
             t.equal(devices.length, 0, 'devices list is empty')
           }
         )
+        .catch(t.threw)
     }
   )
 

@@ -175,6 +175,7 @@ TestServer.start(config)
             return d.promise
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -231,6 +232,7 @@ TestServer.start(config)
             t.equal(x.data.length, 64)
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -275,6 +277,7 @@ TestServer.start(config)
           )
         }
       )
+      .catch(t.threw)
     }
   )
 

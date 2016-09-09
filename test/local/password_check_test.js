@@ -57,6 +57,7 @@ test(
           t.equal(MockCustoms.flag.callCount, 0, 'customs.flag was not called')
         }
       )
+      .catch(t.threw)
   }
 )
 
@@ -97,6 +98,7 @@ test(
           }, 'customs.flag was called with correct event details')
         }
       )
+      .catch(t.threw)
   }
 )
 

@@ -45,6 +45,7 @@ TestServer.start(config)
             t.equal(payload['fxa-tokenVerified'], true, 'tokenVerified is correct')
           }
         )
+        .catch(t.threw)
     }
   )
 
@@ -56,6 +57,7 @@ TestServer.start(config)
       var client = null
       var duration = 1000 * 60 * 60 * 24 // 24 hours
       return Client.create(config.publicUrl, email, password)
+        .catch(t.threw)
         .then(
           function (c) {
             client = c
